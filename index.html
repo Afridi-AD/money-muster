@@ -24,33 +24,33 @@
                 <!-- calculate section  -->
                 <div class="calculate bg-red-300 px-2 py-2 rounded">
                 <div class="income-section">
-                    <h3 class="text-center mb-4 font-semibold text-2xl">Income</h3>
-                    <h2 class="inline">Income :</h2> 
-                    <input class="inline bg-purple-100 px-1" type="text" placeholder="1000">
+                    <h3 class="text-center mb-4 font-semibold text-xl">Income</h3>
+                    <h2  class="inline">Income :</h2> 
+                    <input id="income-input" class="inline bg-purple-100 px-1" type="text" value="000">
                 </div>
                  <div class="expense-section">
-                    <h3 class="text-center mb-4 mt-2 font-semibold text-2xl">Expenses</h3>
+                    <h3 class="text-center mb-4 mt-2 font-semibold text-xl">Expenses</h3>
                     <h2 class="inline-block mb-3">   Food :  </h2> 
-                    <input class="inline-block bg-purple-100 px-1" type="text" placeholder="3000"> <br>
+                    <input id="food-input" class="inline-block bg-purple-100 px-1" type="text" value="000"> <br>
                     <h2 class="inline-block mb-3">Rent :</h2> 
-                    <input class="inline-block bg-purple-100 px-1" type="text" placeholder="2000"> <br>
+                    <input id="rent-input" class="inline-block bg-purple-100 px-1" type="text" value="000"> <br>
                     <h2 class="inline-block mb-3">Clothes :</h2> 
-                    <input class="inline-block bg-purple-100 px-1" type="text" placeholder="500">
+                    <input id="cloth-input" class="inline-block bg-purple-100 px-1" type="text" value="000">
 
                  </div>
                  <div class="calculate-section text-center">
-                     <button class="bg-cyan-800 px-5 py-2 text-white rounded" >Calculate</button>
-                     <h3 class="text-center mb-4 mt-2 font-semibold text-2xl">Total Expenses : 5500</h3>
-                     <h3 class="text-center mb-4 mt-2 ffont-semiboldont-bold text-2xl">Balance : 4500</h3>
+                     <button id="calculate-button" class="bg-cyan-800 px-5 py-2 text-white rounded" >Calculate</button>
+                     <h3 class="text-center mb-4 mt-2 font-semibold text-xl">Total Expenses : <span id="total-expenses"> 000</span></h3>
+                     <h3  class="text-center mb-4 mt-2 ffont-semiboldont-bold text-xl">Balance : <span id="balance" >000</span></h3>
 
                  </div>
                  <div class="saving-section">
-                    <h3 class="inline">Save :</h3>
-                    <input  class="inline bg-purple-100 w-1/4 px-1" type="text" placeholder="20">
+                    <h3  class="inline">Save :</h3>
+                    <input id="save" class="inline bg-purple-100 w-1/4 px-1" type="text" value="20">
                     <h4 class="inline">%</h4>
-                    <button class="inline bg-cyan-800 text-white rounded px-4">Save</button>
-                <h3 class="text-center mb-4 mt-2 font-semibold text-2xl">Saving Amount: 2000</h3>
-                <h3 class="text-center mb-4 mt-2 font-semibold text-2xl">Remaining Balance: 2500</h3>
+                    <button id="save-button" class="inline bg-cyan-800 text-white rounded px-4">Save</button>
+                <h3 class="text-center mb-4 mt-2 font-semibold text-xl">Saving Amount: <span id="saving-amount">000</span></h3>
+                <h3 class="text-center mb-4 mt-2 font-semibold text-xl">Remaining Balance: <span id="remaining-balance">000</span></h3>
                 </div>
 
                 </div>
@@ -59,5 +59,7 @@
             </div>
         </section>
     </main>
+
+    <script src="javaScript/calculate.js"></script>
 </body>
 </html>
