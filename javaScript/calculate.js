@@ -24,7 +24,7 @@ function calculateMoney(){
         const totalExpenses = parseInt(totalExpenseText);
 
 
-        const subTotalExpense = totalExpenses+ foodCost + rentCost + clothCost;
+        const subTotalExpense =  foodCost + rentCost + clothCost;
         totalExpenseValue.innerText = subTotalExpense;
 
 
@@ -32,20 +32,20 @@ function calculateMoney(){
         const balanceTex = subTotalBalence.innerText;
         const subBalence = parseInt(balanceTex);
 
-        const balance = parseInt(subBalence+ incomeTotal-subTotalExpense);
-        console.log (balance);
+        const balance = incomeTotal-subTotalExpense;
+        
         subTotalBalence.innerText =balance;
 
+       
+        
         
 
-
-        // const Totalincome = foodCost + rentCost + clothCost;
-        // incomeInput.value = Totalincome + incomeTotal; 
+        
 
     })
 }
 
- calculateMoney();
+ calculateMoney()
 
 
 
@@ -54,27 +54,40 @@ function calculateMoney(){
 
  document.getElementById('save-button').addEventListener('click',function(){
 
-     const saveInput = document.getElementById('save');
+     
+    const incomeInput = document.getElementById('income-input');
+    const incomeTotalText = incomeInput.value;
+    const incomeTotal = parseInt(incomeTotalText);
+
+    const subTotalBalence = document.getElementById('balance');
+    const balanceTex = subTotalBalence.innerText;
+    const subBalence = parseInt(balanceTex);
+    
+    
+    const saveInput = document.getElementById('save');
      const saveText = saveInput.value;
      const savePecentage = parseInt(saveText);
+     
+     
 
 
      const saviningValue = document.getElementById('saving-amount');
      const saviningValueText =saviningValue.innerText;
      const savingAmount = parseInt(saviningValueText);
 
-     const saving = (balance*savePecentage)/100;
+     const saving = incomeTotal*savePecentage/100;
      saviningValue.innerText= saving
 
 
      const remainingValue = document.getElementById('remaining-balance');
      const remainingBalanceText = remainingValue.innerText;
-     const remainingBalence = parseInt(remainingBalanceText);
+     const remainingBalenceValue = parseInt(remainingBalanceText);
+     const remainingBalence = subBalence-saving;
       
-     
+     calculateMoney();
 
     })
-    // calculateMoney();
+    
  }
 
 
