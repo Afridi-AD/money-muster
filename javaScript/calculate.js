@@ -36,6 +36,14 @@ function calculateMoney(){
         const subTotalExpense =  foodCost + rentCost + clothCost;
         totalExpenseValue.innerText = subTotalExpense;
 
+
+        // income and expense total error handle 
+        const overExpeses = document.getElementById('over-expenses');
+
+        if(incomeTotal < subTotalExpense){
+            overExpeses.style.display = "block"; 
+        }
+
         //  calculate balence 
 
         const subTotalBalence = document.getElementById('balance');
@@ -91,6 +99,25 @@ function calculateMoney(){
     const remainingBalenceValue = parseInt(remainingBalanceText);
     const remainingBalence =  balance.innerText-saving;
     remainingValue.innerText = remainingBalence;
+
+
+    // error handle 
+
+    const saveUnable = document.getElementById('save-unsucces');
+    const saveEnable = document.getElementById("save-succes");
+
+      if (remainingBalence <saving){
+        
+        saveUnable.style.display = 'block';
+        saveEnable.style.display = 'none';
+      }
+      else{
+        
+        saveEnable.style.display = 'block';
+        saveUnable.style.display = 'none';
+      }
+   
+
 
      
       
