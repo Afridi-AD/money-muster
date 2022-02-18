@@ -12,19 +12,19 @@
 <body>
     <!-- header section  -->
     <header>
-        <h1 class="text-orange-600 text-center mt-16 font-semibold text-5xl ">My calculator</h1>
+        <h1 class="text-stone-900 text-center mt-16 font-semibold text-5xl ">My Money statement...</h1>
     </header>
     <!-- main section  -->
     <main>
         <section class="mx-auto w-3/4 mt-8">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
                 <!-- image section  -->
                 <div class="site-img">
-                    <img src="images/img.jpg" alt="">
+                    <img class="max-h-screen rounded" src="images/img3.jpg" alt="">
                 </div>
 
                 <!-- calculate section  -->
-                <div class="calculate bg-red-300 px-2 py-2 rounded">
+                <div class="calculate bg-stone-300 px-2 py-2 rounded">
 
                     <!-- income section  -->
 
@@ -32,6 +32,7 @@
                         <h3 class="text-center mb-4 font-semibold text-xl">Income</h3>
                         <h2 class="inline">Income :</h2>
                         <input id="income-input" class="inline bg-purple-100 px-1" type="text" value="000">
+                        <p id="negative-income" class="hidden bg-orange-200 mt-2 text-center">Your income can not be a negative number...</p>
                     </div>
 
                     <!-- expense section  -->

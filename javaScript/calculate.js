@@ -9,6 +9,14 @@ function calculateMoney(){
        const incomeTotalText = incomeInput.value;
        const incomeTotal = parseInt(incomeTotalText);
 
+
+    //    negative number error handle 
+
+        const negativeInput = document.getElementById('negative-income');
+        if(incomeTotal < 0){
+            negativeInput.style.display ='block';
+        }
+
        //    get input from food input 
        
         const foodInput = document.getElementById('food-input');
